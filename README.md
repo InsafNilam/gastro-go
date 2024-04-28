@@ -1,5 +1,6 @@
 ## Getting Started
-    This guide walks you through setting up your development environment and running your React Native app built with Expo on your device.
+    This guide walks you through setting up your development environment and running your React Native app built 
+    with Expo on your device.
 
 ### Prerequisites
  - Ensure you have Node.js (version 14 or later) and npm (Node Package Manager) installed on your system
