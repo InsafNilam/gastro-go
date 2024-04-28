@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import RootNavigation from "./src/navigation";
+import { useFonts } from "expo-font";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = () => {
+  const [loaded] = useFonts({
+    OpenSansBold: require("./assets/fonts/OpenSans-Bold.ttf"),
+    OpenSansSemiBold: require("./assets/fonts/OpenSans-SemiBold.ttf"),
+    OpenSansMedium: require("./assets/fonts/OpenSans-Medium.ttf"),
+    OpenSansRegular: require("./assets/fonts/OpenSans-Regular.ttf"),
+    OpenSansLight: require("./assets/fonts/OpenSans-Light.ttf"),
+  });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  if (!loaded) return null;
+  return <RootNavigation />;
+};
+
+export default App;
